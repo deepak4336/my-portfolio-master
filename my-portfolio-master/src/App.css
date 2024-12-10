@@ -1,0 +1,399 @@
+.App {
+	font-family: "Lato", system-ui;
+	font-size: 14px;
+	overflow-x: hidden;
+}
+
+.profile-header {
+	margin: 50px 0;
+	text-align: center;
+}
+
+.profile-pic {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.button-default {
+	appearance: none;
+	background-color: #fafbfc;
+	border: 1px solid rgba(27, 31, 35, 0.15);
+	border-radius: 6px;
+	box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+		rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+	box-sizing: border-box;
+	color: #24292e;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Lato", system-ui;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	list-style: none;
+	padding: 6px 16px;
+	position: relative;
+	transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	white-space: nowrap;
+	word-wrap: break-word;
+	margin: 2px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.section-header {
+	font-weight: bold;
+	font-size: large;
+	margin-bottom: 5px;
+}
+
+.section-description {
+	margin-bottom: 3em;
+}
+
+.projects-section {
+	margin: 50px 0;
+	background-color: #f4f4f4;
+	padding: 3em 5em;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 20px;
+}
+
+.project-card {
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.project-image img {
+	width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.project-card div {
+	margin: 0;
+	padding: 0;
+}
+
+.project-details {
+	padding: 1em !important;
+	border-top: 1px solid #e6e6e6;
+}
+
+.project-name {
+	font-weight: bold;
+	margin-bottom: 10px !important;
+}
+
+.project-description {
+	font-size: small;
+}
+
+.project-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 15px;
+	font-size: small;
+	padding: 1em !important;
+}
+
+.project-link {
+	color: #3498db;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.project-link:hover {
+	text-decoration: underline;
+}
+
+.project-logos {
+	display: flex;
+	gap: 10px;
+}
+
+.project-tech-logo-text {
+	display: inline-block;
+	padding: 4px 8px;
+	background-color: #f0f0f0;
+	border-radius: 4px;
+	font-size: 0.85em;
+	color: #333;
+}
+
+.project-tech-logo,
+.project-link {
+	position: relative;
+	display: inline-block;
+}
+
+.project-tech-logo[data-tooltip]:hover::after,
+.project-link[data-tooltip]:hover::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 120%; /* Position the tooltip above the element */
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #333;
+	color: #fff;
+	padding: 5px;
+	border-radius: 4px;
+	white-space: nowrap;
+	font-size: 12px;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s;
+}
+
+.project-tech-logo[data-tooltip]:hover::before,
+.project-link[data-tooltip]:hover::before {
+	content: "";
+	position: absolute;
+	bottom: 110%; /* Position the arrow just above the tooltip */
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 5px;
+	border-style: solid;
+	border-color: #333 transparent transparent transparent; /* Tooltip arrow */
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+	transition: opacity 0.3s;
+}
+
+.project-tech-logo[data-tooltip]:hover::after,
+.project-link[data-tooltip]:hover::after,
+.project-tech-logo[data-tooltip]:hover::before,
+.project-link[data-tooltip]:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.footer {
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+	font-size: small;
+	border-top: 1px solid #ececec;
+	margin-top: 3em;
+}
+
+.footer-left,
+.footer-right {
+	flex: 1;
+	text-align: center;
+}
+
+.footer img {
+	max-width: 70px;
+}
+
+.footer img {
+	max-width: 70px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-center a {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.profile-details {
+	padding: 2em 5em;
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.details-grid {
+	display: flex;
+	flex-direction: column; /* Stack items vertically */
+	gap: 20px; /* Adds spacing between each detail item */
+}
+
+.detail-item {
+	display: flex;
+	flex-direction: row; /* Align the icon, data, and date in a row */
+	justify-content: space-between; /* Spread the icon, data, and date */
+	align-items: center; /* Vertically center content */
+	padding: 10px 0;
+}
+
+.detail-item-icon {
+	flex-shrink: 0; /* Prevents the icon from shrinking */
+	margin-right: 20px; /* Adds space between the icon and the data */
+}
+
+.detail-item-data {
+	flex-grow: 1; /* Allows the data to take up the remaining space */
+	margin-right: 15px; /* Adds space between the data and the date */
+}
+
+.detail-item-data div:first-child {
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.detail-item-date {
+	flex-shrink: 0; /* Prevents the date from shrinking */
+	text-align: right; /* Align the date to the right */
+	min-width: 100px; /* Ensure the date column has a consistent width */
+	white-space: nowrap; /* Prevent date from wrapping */
+}
+
+/* Optional: Styling for icons */
+.detail-item-icon img {
+	width: 30px; /* Adjust icon size */
+	height: 30px;
+}
+
+.footer-right a {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+	.App {
+		font-size: 16px;
+	}
+	.profile-header {
+		padding: 0em 1em;
+	}
+	.section-header {
+		font-weight: bold;
+		font-size: large;
+		margin-bottom: 5px;
+		text-align: center;
+		margin-top: 1em;
+	}
+
+	.section-description {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	.projects-section {
+		margin: 50px 0;
+		background-color: #f4f4f4;
+		padding: 1em;
+	}
+	.projects-grid {
+		grid-template-columns: 1fr; /* Show only one project card per row on mobile */
+		gap: 15px; /* Adjust gap for mobile if needed */
+		padding: 1em; /* Optional: Adjust padding for mobile */
+	}
+	.project-details {
+		font-size: 16px;
+	}
+	.footer {
+		flex-direction: column; /* Stack elements vertically */
+		text-align: center; /* Center-align content */
+		gap: 5px; /* Add some space between rows */
+	}
+
+	.footer-left,
+	.footer-center,
+	.footer-right {
+		margin: 10px 0; /* Add margin between the rows */
+	}
+
+	.profile-details {
+		padding: 0em 2em;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.button-default svg {
+	margin-right: 3px;
+}
+
+.launching-soon {
+	background-color: #ffffb7;
+	padding: 3px 10px;
+	border-radius: 15px;
+}
+
+/* SEO QUOTES */
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.left-pane,
+.right-pane {
+	width: 45%;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+}
+
+.left-pane {
+	margin-right: 20px;
+}
+
+h2,
+h3,
+h4 {
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	margin-bottom: 5px;
+}
+
+input {
+	margin-right: 10px;
+}
+
+.invoice {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 20px;
+	max-height: calc(100vh - 100px);
+	overflow-y: auto;
+}
+
+.invoice-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.total {
+	text-align: right;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.total h3 {
+	margin: 0;
+}
